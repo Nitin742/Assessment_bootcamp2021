@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        img {
+            float: right;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>float properties Example</h3>
+    <h1>Our Stroy</h1>
+    <p><img src="tothenewimage.jpg" alt="Tothenew" style="width:170px;height:170px;margin-left:15px;">
+        We started with a bunch of passionate techies in 2008, and now have grown into a family of 
+        1500+ Newers, spread across our three locations - New Delhi, Dubai, and NYC, catering to over
+         200 customers worldwide.
+      In 2008, when the entire world was staring at one of the biggest depressions, we came into being.
+       Our birth in the toughest of the times helped us in two ways - first, we had to be very cutting-edge
+        with a clear differentiating factor, and second, we had to have very strong values and culture to 
+        attract and retain top-notch talent.</p>
+        
+    
+</body>
+</html>

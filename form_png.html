@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	font-family: sans-serif;
+}
+
+body {
+	padding-bottom: 3rem;
+}
+
+:root {
+	--primary-color: #0ee2aa;
+	--text-blue: #33a2cc;
+	--text-gray: #8c8c8c;
+	--bg-light: #e4e4e4;
+	--bg-dark: #b2b2b2;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+#header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 4rem 0;
+}
+
+#header .heading {
+	font-weight: 400;
+}
+
+#header .heading,
+#header .nav-text {
+	color: var(--text-blue);
+}
+
+#header .nav {
+	display: flex;
+	align-items: center;
+}
+
+#header .nav .nav-link:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.divider {
+	background-color: var(--bg-light);
+	opacity: 0.3;
+	margin: 1.5rem 0 1rem;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+
+	margin: 0 auto;
+	width: 400px;
+
+	border: 1px solid var(--bg-dark);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.form-container .heading {
+	padding: 1.25rem 0 1.25rem 1rem;
+	background-color: var(--bg-dark);
+	color: white;
+}
+
+.form-container .form {
+	padding-top: 0.75rem;
+}
+
+.form-container .field-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.field-container,
+.radio-group {
+	margin: 0 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.field-container label {
+	color: var(--text-gray);
+	margin-bottom: 0.25rem;
+}
+
+.field-container input,
+.field-container textarea,
+.field-container select {
+	width: 100%;
+	outline: none;
+	padding: 0.25rem 0.5rem;
+	border-width: 1px;
+	border-color: var(--bg-dark);
+	border-radius: 4px;
+}
+
+.field-container input[name='version'] {
+	width: 30%;
+}
+
+.field-container textarea {
+	min-height: 60px;
+	max-height: 80px;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.field-container select {
+	color: white;
+	background-color: var(--primary-color);
+	border: none;
+}
+
+.form .radio-group .group-row {
+	display: flex;
+}
+
+.form .radio-group .group-row:not(:last-child) {
+	margin-bottom: 0.25rem;
+}
+
+.form .radio-group .radio-group-heading {
+	color: var(--text-gray);
+	margin-bottom: 0.25rem;
+}
+
+.form .radio-group .field-container {
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	margin: unset;
+	flex-grow: 1;
+}
+
+.form .radio-group .field-container label {
+	margin-left: 8px;
+	margin-bottom: unset;
+}
+
+.form .radio-group .field-container input {
+	width: 13px;
+}
+
+.form-container .footer {
+	background-color: var(--bg-light);
+	padding: 1rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.form-container .footer .submit-btn {
+	background-color: var(--primary-color);
+	border: none;
+	outline: none;
+	padding: 0.5rem 1.5rem;
+	border-radius: 8px;
+	color: white;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.form-container .field-container input[type='file'] {
+	width: 100%;
+	border: 1px solid var(--bg-dark);
+	border-radius: 4px;
+	padding: 0.25rem 0.5rem;
+
+	position: relative;
+
+	cursor: pointer;
+
+	color: var(--text-gray);
+
+	padding-right: 110px;
+}
+
+.form-container
+	.field-container
+	input[type='file']::-webkit-file-upload-button {
+	background-color: var(--bg-dark);
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	margin: unset;
+
+	height: 100%;
+
+	border: none;
+	outline: none;
+
+	color: white;
+
+	cursor: pointer;
+
+	width: 100px;
+}
+
+.form-container .field-container input[type='file']::file-selector-button {
+	background-color: var(--bg-dark);
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	margin: unset;
+
+	height: 100%;
+
+	border: none;
+	outline: none;
+
+	color: white;
+
+	cursor: pointer;
+
+	width: 100px;
+}
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 class="heading">TO THE NEW</h1>
+
+        <!-- Navbar -->
+        <nav class="nav">
+            <a href="#home" class="nav-link nav-text" rel="noopener noreferrer"
+                >Home</a
+            >
+
+            <a href="#help" class="nav-link nav-text" rel="noopener noreferrer"
+                >Quick Help</a
+            >
+        </nav>
+    </header>
+
+    <hr class="divider" />
+
+    
+    <main id="#main">
+        
+        <div class="form-container">
+            <h3 class="heading">Bug Report</h3>
+
+            <!-- Form -->
+            <form class="form">
+                <div class="field-container">
+                    <label for="title">Title:*</label>
+                    <input type="text" id="title" name="title" required />
+                </div>
+
+                <div class="field-container">
+                    <label for="description">Description:*</label>
+                    <textarea name="description" id="description" required></textarea>
+                </div>
+
+                <div class="field-container">
+                    <label for="operating-system">Operating System:</label>
+                    <select name="operating system" id="operating-system">
+                        <option value="Windows XP">Windows XP</option>
+                        <option value="Ubuntu">Windows 10</option>
+                        <option value="MacOS">Windows 7</option>
+                    </select>
+                </div>
+
+                <div class="field-container">
+                    <label for="product">Product:*</label>
+                    <select name="product" id="product">
+                        <option value="Formoid">Formoid</option>
+                        <option value="Xyz">Foemoid1</option>
+                        <option value="abc">Foemoid2</option>
+                    </select>
+                </div>
+
+                <div class="field-container">
+                    <label for="version">Version:*</label>
+                    <input type="text" id="version" name="version" required />
+                </div>
+
+                <div class="radio-group">
+                    <p class="radio-group-heading">License:*</p>
+
+                    <div class="group-row">
+                        <div class="field-container">
+                            <label for="license-free">Free</label>
+                            <input
+                                type="radio"
+                                name="license"
+                                value="Free"
+                                id="license-free"
+                                required
+                            />
+                        </div>
+
+                        <div class="field-container">
+                            <label for="license-business">Business</label>
+                            <input
+                                type="radio"
+                                name="license"
+                                value="Business"
+                                id="license-Business"
+                                required
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field-container">
+                    <label for="severity">Severity:</label>
+                    <select name="severity" id="severity">
+                        <option value="Formoid">Critical</option>
+                        <option value="Xyz">Moderate</option>
+                        <option value="abc">Low</option>
+                    </select>
+                </div>
+
+                <div class="field-container">
+                    <label for="attachments">Attachments</label>
+                    <input type="file" id="attachments" name="attachments" />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="footer">
+                    <input type="submit" class="submit-btn" value="Send" />
+                </div>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>
