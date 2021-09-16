@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We have bind a click funtion to parent div but we want stop it from performing when user clicks on its child li</title>
+</head>
+<body>
+    <div> Grandparent <p>
+    parent<br>
+            <span>child</span>
+        </p>
+    </div>
+    </body>
+<script>
+    $(document).ready(function () {
+       $('div').click((e)=>{
+           $('span').append(" grandparent in child");
+       })
+       $('p').click((e)=>{
+           e.stopPropagation();
+           $('span').append(" child again");
+       })
+    })
+</script>
+</html>

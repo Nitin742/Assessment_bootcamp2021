@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On clicking on "google" tag. It is taking us to google home page. Stop it from happening.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('#temp').click(function (e) {
+        e.preventDefault();
+     alert('cannot access google');
+ });
+   });
+    </script>
+</head>
+<body>
+    <center><p>google.com will not open</p>
+        <a id='temp' href='http://www.google.com'> google.com <p></a></center>
+    
+</body>
+</html>

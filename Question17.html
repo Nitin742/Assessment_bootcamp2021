@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="aaa" src="https://images.pexels.com/photos/2666154/pexels-photo-2666154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" width="600" height="600" name="image" />
+    <script>
+        var image = document.getElementById("aaa");
+        var img_array = ["https://images.pexels.com/photos/3761508/pexels-photo-3761508.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", "https://images.pexels.com/photos/6953835/pexels-photo-6953835.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", "https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", "https://images.pexels.com/photos/4386498/pexels-photo-4386498.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", "https://images.pexels.com/photos/6624457/pexels-photo-6624457.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"];
+        var index = 0;
+
+        function slide() {
+            image.setAttribute("src", img_array[index]);
+            index++;
+            if (index >= img_array.length) {
+                index = 0;
+            }
+        }
+        setInterval("slide()", 5000);
+    </script>
+</body>
+
+
+</html>

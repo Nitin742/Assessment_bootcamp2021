@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chagne color of every cell which has numberl larger than 10.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+        </style>
+        </head>
+        <body>
+        <table style="width:100%" id="someTable">
+           <center><strong>Table Record </strong><center>
+          <tr>
+            <th class="name">First Name</th>
+            <th class="number">Points</th>
+          </tr>
+          <tr>
+            <td class="name">nitin</td>
+            <td class="number">10</td>
+          </tr>
+          <tr>
+            <td class="name">Amit</td>
+            <td class="number">9</td>
+          </tr>
+           <tr>
+            <td class="name">Rahul</td>
+            <td class="number">20</td>
+          </tr>
+        <tr>
+            <td class="name">xyz</td>
+            <td class="number">8</td>
+          </tr>
+        </table>
+        <script>
+        $(document).ready(function(){
+        $('.number').each(function(i, n) {
+           if($(n).text() > 10) 
+              $(n).css('color', 'green').css('background-color','red');
+        });
+        });
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

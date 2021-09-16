@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get dropdown selected value on onchanage event and append in div container</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function() { 
+         $('select').on('change', function() {
+         $("#ye").append(this.value+" <br>")});
+});
+</script>
+<style>
+    .test
+     { background-color:rgb(255, 0, 0);}
+ </style>
+</head>
+<body>
+    <p>Please select the iteams.</p>
+<select>
+  <option value="">Select items</option>
+  <option value="windowxp">windowxp
+  <option value="window 10">window 10
+  <option value="linux">linux
+  </select>
+<p>you choose this option <span><p id="ye"></p></span> </p>
+    </body>
+</html>
